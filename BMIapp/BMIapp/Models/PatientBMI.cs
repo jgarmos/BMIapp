@@ -23,10 +23,12 @@ namespace BMIapp.Models
         public double BMI
         {
             get { return CalculateBMI(this); }
+            set { }
         }
 
         public string Category {
-            get { return CalculateBMIcategory(this.BMI); }
+            get { return CalculateBMIcategory(this.BMI);  }
+            set { }
         }
 
 
@@ -35,6 +37,10 @@ namespace BMIapp.Models
             Weight = weight;
             Height = height;
         }
+
+
+
+
 
 
         private double CalculateBMI(PatientBMI patient)
@@ -51,19 +57,19 @@ namespace BMIapp.Models
 
             if (bmi < 18.5)
             {
-                return "Underweight";
+                return BMICategory.Underweight.ToString();
             }
             if (bmi >= 18.5 && bmi <= 24.9)
             {
-                return "Normal Weight";
+                return BMICategory.Normal_Weight.ToString();
             }
-            if (bmi >= 25.5 && bmi <= 29.9)
+            if (bmi >= 25 && bmi <= 29.9)
             {
-                return "Pre-obesity";
+                return BMICategory.Pre_obesity.ToString();
             }
             if (bmi >= 30 && bmi <= 34.9)
             {
-                return "Obesity class I";
+                return BMICategory.Obesity_class_I.ToString();
             }
             else
             {

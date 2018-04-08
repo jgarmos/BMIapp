@@ -1,0 +1,37 @@
+[
+  {
+    "User_Id": "5cce9b1f-eaed-4ac6-af04-42b24ac8b4b4",
+    "Weight": "68",
+    "Height": "1.50"
+  },
+  {
+    "User_Id": "646e4615-3458-4e2f-9cec-640fde12ec01",
+    "Weight": "82",
+    "Height": "1.80"
+  },
+  {
+    "User_Id": "ad17495e-ec38-4173-80a1-2b010f0cbf6f",
+    "Weight": "50",
+    "Height": "1.50"
+  },
+  {
+    "User_Id": "9ce5a896-017d-4900-b205-47dd913efb10",
+    "Weight": "150",
+    "Height": "1.95"
+  },
+  {
+    "User_Id": "bb89011d-bba4-4bc7-b299-a48594118320",
+    "Weight": "95",
+    "Height": "1.78"
+  },
+  {
+    "User_Id": "d07313a2-db18-461e-9ea2-1437b1f8ccb1",
+    "Weight": "77",
+    "Height": "1.82"
+  },
+  {
+    "User_Id": "ef1b401b-364a-41b2-9377-2a3791c53606",
+    "Weight": "87",
+    "Height": "1.78"
+  }
+]

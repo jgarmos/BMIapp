@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PatientBMIsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -181,12 +182,22 @@
     <Compile Include="Migrations\201804071957419_CreateTablePatientBMI.Designer.cs">
       <DependentUpon>201804071957419_CreateTablePatientBMI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804072128151_updateTablePatientBMI_addCategoryColumn.cs" />
+    <Compile Include="Migrations\201804072128151_updateTablePatientBMI_addCategoryColumn.Designer.cs">
+      <DependentUpon>201804072128151_updateTablePatientBMI_addCategoryColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804080827089_updateTablePatientBMI_addBMIColumn.cs" />
+    <Compile Include="Migrations\201804080827089_updateTablePatientBMI_addBMIColumn.Designer.cs">
+      <DependentUpon>201804080827089_updateTablePatientBMI_addBMIColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\BMICategory.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PatientBMI.cs" />
+    <Compile Include="Models\PatientsCategoryCounter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -199,6 +210,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="App_Data\PatientsBMI.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -245,10 +257,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\PatientBMIs\PatientsCategoryCounter.cshtml" />
+    <Content Include="Views\PatientBMIs\PopulatePatientsBMI.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -263,6 +275,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804071957419_CreateTablePatientBMI.resx">
       <DependentUpon>201804071957419_CreateTablePatientBMI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804072128151_updateTablePatientBMI_addCategoryColumn.resx">
+      <DependentUpon>201804072128151_updateTablePatientBMI_addCategoryColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804080827089_updateTablePatientBMI_addBMIColumn.resx">
+      <DependentUpon>201804080827089_updateTablePatientBMI_addBMIColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

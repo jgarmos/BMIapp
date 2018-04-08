@@ -1,0 +1,34 @@
+﻿@model IEnumerable<BMIapp.Models.PatientsCategoryCounter>
+
+@{
+    ViewBag.Title = "Number Of Patients By Category";
+}
+
+<h2>Number Of Patients By Category</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Count)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Count)
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Back to home", "Index", "Home")
+</div>
