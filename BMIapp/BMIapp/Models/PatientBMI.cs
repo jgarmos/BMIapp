@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+
 
 namespace BMIapp.Models
 {
@@ -12,7 +10,7 @@ namespace BMIapp.Models
         public int Id { get; set; }
 
         [Required]
-        public ApplicationUser User { get; set; }
+        public virtual ApplicationUser User { get; set; }
 
         [Required]
         public double Weight { get; set; }
@@ -31,16 +29,14 @@ namespace BMIapp.Models
             set { }
         }
 
-
+        public PatientBMI()
+        {
+        }
         public PatientBMI (double weight, double height)
         {
             Weight = weight;
             Height = height;
         }
-
-
-
-
 
 
         private double CalculateBMI(PatientBMI patient)

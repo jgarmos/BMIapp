@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
 using System.Web.Mvc;
 using BMIapp.Models;
 using System.IO;
 using Newtonsoft.Json;
+using Microsoft.AspNet.Identity;
 
 namespace BMIapp.Controllers
 {
@@ -48,7 +46,7 @@ namespace BMIapp.Controllers
             public double Height { get; set; }
         }
 
-        // GET: PatientsCategoryCounter
+        // GET: PopulatePatientsBMI
         public ActionResult PopulatePatientsBMI()
         {
 
@@ -72,6 +70,21 @@ namespace BMIapp.Controllers
             }
 
             return View();
+        }
+
+        [Authorize]
+        // GET: GetPatientInformation
+        public ActionResult GetPatientInformation()
+        {
+            var userId = User.Identity.GetUserId();
+
+            var query = from p in db.PatientsBMI
+                        where p.User.Id == userId
+                        select p;
+
+            var patientInfo = query.ToList().FirstOrDefault();
+
+            return View(patientInfo);
         }
 
     }

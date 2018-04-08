@@ -1,0 +1,29 @@
+﻿@model BMIapp.Models.PatientBMI
+
+@{
+    ViewBag.Title = "GetPatientInformation";
+}
+
+<h2>Personal Patient Information</h2>
+
+
+<table class="table">
+    <tr>
+        <th>User</th>
+        <th>Height (Meters)</th>
+        <th>Weight (Kilogrames)</th>
+        <th>BMI</th>
+        <th>Category</th>
+    </tr>
+    <tr>
+        <td>@Model.User.Email</td>
+        <td>@Model.Height m</td>
+        <td>@Model.Weight Kg</td>
+        <td>@Model.BMI</td>
+        <td>@Model.Category</td>
+    </tr>
+
+</table>
+<div>
+    @Html.ActionLink("Back to home", "Index", "Home")
+</div>

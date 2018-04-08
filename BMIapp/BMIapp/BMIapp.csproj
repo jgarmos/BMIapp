@@ -259,6 +259,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\PatientBMIs\PatientsCategoryCounter.cshtml" />
     <Content Include="Views\PatientBMIs\PopulatePatientsBMI.cshtml" />
+    <Content Include="Views\PatientBMIs\GetPatientInformation.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
